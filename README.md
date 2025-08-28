@@ -16,13 +16,13 @@ Utsav Acharya
 | help    | man         | to get help of the running command       |
 | Get-Location | pwd    | to get the path location       |
 | Get-ChildItem | ls    |   to list the file with in the directory or files     |
-| mkdir   | mkdir       |   make      |
-| Set-Location | cd     |        |
-| New-Item | touch      |        |
-| Move-Item | mv        |        |
-| Copy-Item | cp        |        |
-| Remove-Item | rm      |        |
-| notepad.exe | vim     |        |
+| mkdir   | mkdir       |   make   directory   |
+| Set-Location | cd     |    set to specific location from current working location    |
+| New-Item | touch      |create and allow ne  item to set it;s value        |
+| Move-Item | mv        |   move one location to another location     |
+| Copy-Item | cp        |  copy item      |
+| Remove-Item | rm      |   remove an item     |
+| notepad.exe | vim     |     opens whole file   |
 
 ## Part 3 - Command Line Navigation
 
@@ -45,17 +45,26 @@ window power shell
 8. Move the file named `test.txt` into `DirA`:Move-item test.txt DirA
 9. Contents of `test.txt`:cat test.txt
 ```
-Put your words here 123333
+Put your words here :123333
 ```
 10. Make a copy of `test.txt` named `copy.txt` in `DirA`:     copy test.txt DirA\copy.txt 
 11. View the contents of `DirA`: vim DirA
-12. Make a copy of `test.txt` in `Dir B` named `fodder.txt`:Copy-Item -Path "C:\Users\haede\DirA\test.txt" -Destination "C:\Users\haede\Dir B\fodder.txt"
+12. Make a copy of `test.txt` in `Dir B` named `fodder.txt`:Copy-Item -Path "C:\Users\Utsav\DirA\test.txt" -Destination "C:\Users\Utsav\Dir B\fodder.txt"
 Delete / remo
 13. Delete / remove both `fodder.txt` AND `Dir B`:Remove-Item Dir B -Recurse
 
 ## Citations
 
-To add citations, provide the site and a summary of what it assisted you with.  If generative AI was used, include which generative AI system was used and what prompt(s) you fed it.
+tutor 
+research class mate 
+google https://www.bing.com/search?pglt=297&q=Make+a+copy+of+%60test.txt%60+named+%60copy.txt%60+in+%60DirA%60+in+window&cvid=34cbd03a9f9b4d2ba98efc4f288e9153&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIHCAEQ6wcYQNIBCTI0NjAwajBqMagCALACAA&FORM=ANNTA1&PC=PCMEDGEDP
+i have get some answer in it just two  last two answer where search for 12 and 13 thank you
+for more information i just wanna include that :
+https://github.com/0HStein0/Lab01/edit/main/README.md
+https://github.com/qudra28/qudra28/blob/main/LAB1.md
+this two username are public on github please ask them to private i just wanna make sure that we won't be on problem cause some content might be used 
+
+
 
 
 
