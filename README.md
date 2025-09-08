@@ -7,7 +7,7 @@ Utsav Acharya
 
 ## Part 1 - GitHub Profile
 
-1. https://github.com/utasar)
+[1. https://github.com/utasar](https://github.com/utasar/CEG-2350---OS-Concepts-and-Usage-Utsav_FALL_2025/blob/main/README.md))
 
 ## Part 2 - Research
 
