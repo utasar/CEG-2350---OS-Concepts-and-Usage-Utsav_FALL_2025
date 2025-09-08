@@ -34,11 +34,11 @@ ssh -i /mnt/c/Users/User/Desktop/labsuser.pem ubuntu@44.217.99.208
 
 ## Part 3 Answers
 
-1. Command to create new user: sudo useradd -m utsav
-2. Path to new user's home directory: /home/utsav
-3. Evaluate if `ubuntu` can add files to new user's home directory:ls -id /home/utsav
-4. Command to switch to new user:su - utsav
-5. Command(s) to go to new user's home directory:cd /home/utsav
+1. Command to create new user: sudo useradd -mbob 
+2. Path to new user's home directory: /home/bob
+3. Evaluate if `ubuntu` can add files to new user's home directory:ls -id /home/bob
+4. Command to switch to new user:su - bob
+5. Command(s) to go to new user's home directory:cd /home/bob
 6. Evaluate if new user can add files to user's home directory:touch text.txt
 7. Command to return to `ubuntu` user:su -ubuntu
 8. Command to return to `ubuntu` home directory: cd/home/ubuntu
@@ -46,15 +46,16 @@ ssh -i /mnt/c/Users/User/Desktop/labsuser.pem ubuntu@44.217.99.208
 ## Part 4 Answers
 
 1. Command(s) to create group named `squad` and add members:sudo groupadd squad
-2. Command(s) to add `ubuntu` & user to group `squad`:sudo usermod -aG squad ubuntu
+2. Command(s) to add `ubuntu` & user to group `squad`:
+sudo usermod -aG squad ubuntu
 sudo usermod -aG squad utsav
-3. Command(s) to allow `squad` to view the `ubuntu` user's home directory contents:sudo chmod 750 /home/ubuntu
+3. Command(s) to allow `squad` to view the `ubuntu` user's home directory contents:
+sudo chmod 750 /home/ubuntu
 sudo chgrp squad /home/ubuntu
 4. Command(s) to modify `share` to have group ownership of `squad`:sudo chown :squad share
-5. Describe your tests and commands with the user account:
-6. cribe your tests and commands with the user account:
+7. Describe your tests and commands with the user account:
 
-Switched to utsav → su - utsav
+Switched to utsav → su - bob
 
 Navigated to /home/ubuntu/share → verified access.
 
@@ -84,20 +85,25 @@ Permissions default to rw-r--r-- unless changed.
 Contents inside of `share`
 | Account   | Can View  | Can Edit  | Can Change Permissions    |
 | ---       | ---       | ---       | ---                       |
-| `root`    |           |           |                           |
-| `ubuntu`  |           |           |                           |
-| `BOB`     |           |           |                           |
+| `root`    |  Y         |   Y        |           Y                |
+| `ubuntu`  |   Y        |    Y       |            N
+| `BOB`     |    Y       |  Y         |             N              |
 
 `madewithsudo.txt`
 | Account   | Can View  | Can Edit  | Can Change Permissions    |
 | ---       | ---       | ---       | ---                       |
-| `root`    |           |           |                           |
-| `ubuntu`  |           |           |                           |
-| `BOB`     |           |           |                           |
+| `root`    |   Y        |    Y       |                 Y          |
+| `ubuntu`  |    Y       |     N      |                  N         |
+| `BOB`     |     Y      |      N     |                   N        |
 
 5. Command(s) to modify permissions:
-6. How to give user account `sudo`:
-
+   chmod 775 madewithsudo.txt
+chown ubuntu:squad madewithsudo.txt
+7. How to give user account `sudo`:
+sudo usermod -aG sudo bob
 ## Citations
-
-To add citations, provide the site and a summary of what it assisted you with.  If generative AI was used, include which generative AI system was used and what prompt(s) you fed it.
+AWS Academy Learner Lab instructions (course module)
+LAB TA 
+CLASS TEACHER BIBECK 
+LINUX MAN PAGES 
+I USED CHATGPT FOR FIND THE SSH TO AWS UBUNTU user name
