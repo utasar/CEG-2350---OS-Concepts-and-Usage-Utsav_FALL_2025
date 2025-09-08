@@ -74,13 +74,18 @@ For each, write the command used or answer the question posed.
 1. Command(s) to make file using `sudo`: sudo touch madewithsudo.txt
 2. Command(s) to make file with `root`:
  sudo su
+
 touch madewithroot.txt
+
 exit
-3. Describe / compare ownership and permissions of files:
-   Files created with sudo or root are owned by root:root.
+4. Describe / compare ownership and permissions of files:
+ Files created with sudo or root are owned by root:root.
+
 Files created with a normal user are owned by username:username.
+
 Permissions default to rw-r--r-- unless changed.
-4. Which account can do what actions? (Type Y or N in columns)
+
+5. Which account can do what actions? (Type Y or N in columns)
 
 Contents inside of `share`
 | Account   | Can View  | Can Edit  | Can Change Permissions    |
@@ -97,7 +102,8 @@ Contents inside of `share`
 | `BOB`     |     Y      |      N     |                   N        |
 
 5. Command(s) to modify permissions:
-   chmod 775 madewithsudo.txt
+chmod 775 madewithsudo.txt
+   
 chown ubuntu:squad madewithsudo.txt
 7. How to give user account `sudo`:
 sudo usermod -aG sudo bob
