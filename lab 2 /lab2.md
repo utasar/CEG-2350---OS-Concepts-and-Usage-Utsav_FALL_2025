@@ -109,7 +109,12 @@ chown ubuntu:squad madewithsudo.txt
 sudo usermod -aG sudo bob
 ## Citations
 AWS Academy Learner Lab instructions (course module)
+
 LAB TA 
+
+
 CLASS TEACHER BIBECK 
+
 LINUX MAN PAGES 
+
 I USED CHATGPT FOR FIND THE SSH TO AWS UBUNTU user name
