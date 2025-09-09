@@ -34,13 +34,13 @@ ssh -i /mnt/c/Users/User/Desktop/labsuser.pem ubuntu@54.157.67.102
 
 ## Part 3 Answers
 
-1. Command to create new user: sudo useradd -mbob 
-2. Path to new user's home directory: /home/bob
-3. Evaluate if `ubuntu` can add files to new user's home directory:ls -id /home/bob
-4. Command to switch to new user:su - bob
-5. Command(s) to go to new user's home directory:cd /home/bob
-6. Evaluate if new user can add files to user's home directory:touch text.txt
-7. Command to return to `ubuntu` user:su -ubuntu
+1. Command to create new user: sudo useradd joker
+2. Path to new user's home directory: /home/joker
+3. Evaluate if `ubuntu` can add files to new user's home directory: No the permission change is required
+4. Command to switch to new user: sudo su joker
+5. Command(s) to go to new user's home directory:cd /home/joker
+6. Evaluate if new user can add files to user's home directory: No
+7. Command to return to `ubuntu` user:sudo su -ubuntu
 8. Command to return to `ubuntu` home directory: cd/home/ubuntu
 
 ## Part 4 Answers
@@ -48,14 +48,14 @@ ssh -i /mnt/c/Users/User/Desktop/labsuser.pem ubuntu@54.157.67.102
 1. Command(s) to create group named `squad` and add members:sudo groupadd squad
 2. Command(s) to add `ubuntu` & user to group `squad`:
 sudo usermod -aG squad ubuntu
-sudo usermod -aG squad utsav
+sudo usermod -aG squad joker
 3. Command(s) to allow `squad` to view the `ubuntu` user's home directory contents:
 sudo chmod 750 /home/ubuntu
 sudo chgrp squad /home/ubuntu
-4. Command(s) to modify `share` to have group ownership of `squad`:sudo chown :squad share
-7. Describe your tests and commands with the user account:
+4. Command(s) to modify `share` to have group ownership of `squad`:sudo chown :squad changrp -R squad share
+7. Describe your tests and commands with the user account: 
 
-Switched to utsav → su - bob
+Switched to joker: su - joker
 
 Navigated to /home/ubuntu/share → verified access.
 
@@ -65,17 +65,17 @@ Directory share owned by group squad.
 
 Group squad has write permissions.
 
-Both ubuntu and utsav are members of squad.
+Both ubuntu and joker are members of squad.
 
 ## Part 5 Answers
 
 For each, write the command used or answer the question posed.
 
-1. Command(s) to make file using `sudo`: sudo touch madewithsudo.txt
+1. Command(s) to make file using `sudo`: sudo touch ilovemeat.txt
 2. Command(s) to make file with `root`:
  sudo su
 
-touch madewithroot.txt
+touch ilovemeat.txt
 
 exit
 4. Describe / compare ownership and permissions of files:
@@ -102,11 +102,11 @@ Contents inside of `share`
 | `BOB`     |     Y      |      N     |                   N        |
 
 5. Command(s) to modify permissions:
-chmod 775 madewithsudo.txt
+chmod 664 madewithsudo.txt
    
 chown ubuntu:squad madewithsudo.txt
 7. How to give user account `sudo`:
-sudo usermod -aG sudo bob
+sudo usermod -aG sudo joker
 ## Citations
 AWS Academy Learner Lab instructions (course module)
 
