@@ -53,6 +53,7 @@ sudo usermod -aG squad joker
 sudo chmod 750 /home/ubuntu
 sudo chgrp squad /home/ubuntu
 4. Command(s) to modify `share` to have group ownership of `squad`:sudo chown :squad changrp -R squad share
+
 7. Describe your tests and commands with the user account: 
 
 Switched to joker: su - joker
@@ -60,6 +61,7 @@ Switched to joker: su - joker
 Navigated to /home/ubuntu/share → verified access.
 
 Created a file inside → touch text.txt.
+
 7. Describe the full set of permissions / settings that enable the user to make edits:
 Directory share owned by group squad.
 
@@ -78,6 +80,7 @@ For each, write the command used or answer the question posed.
 touch ilovemeat.txt
 
 exit
+
 4. Describe / compare ownership and permissions of files:
  Files created with sudo or root are owned by root:root.
 
