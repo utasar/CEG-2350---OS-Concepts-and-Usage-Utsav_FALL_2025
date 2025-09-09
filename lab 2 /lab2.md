@@ -10,7 +10,7 @@ Full / absolute path to your private key file: /mnt/c/Users/User/Desktop/labsuse
 
 Command to SSH to AWS instance:
 ```
-ssh -i /mnt/c/Users/User/Desktop/labsuser.pem ubuntu@44.217.99.208
+ssh -i /mnt/c/Users/User/Desktop/labsuser.pem ubuntu@98.80.67.149
 
 ```
 
